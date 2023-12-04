@@ -1,0 +1,29 @@
+<JUEGO DE LOS 5 SEGUNDOS html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUEGO DE LOS 5 SEGUNDOS</title>
+    <link rel="stylesheet" href="JUEGO DE LOS 5 SEGUNDOS ESTILOS.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>JUEGO DE LOS 5 SEGUNDOS</h1>
+        <form id="name-form" onsubmit="startGameWithUsername(); return false;">
+            <label for="username">Introduce tu nombre para empezar a jugar:</label>
+            <input type="text" id="username" required>
+            <button type="submit">Comenzar</button>
+        </form>
+        <p id="greeting"></p>
+        <p id="result" class="game-result"></p>
+
+        <div id="timer-container" style="display: none;">
+        <p>Haz clic en el botón cuando creas que han pasado exactamente 5 segundos.</p>
+        <div id="timer" class="game-timer">5.000</div>
+        <button id="start-btn" onclick="startGame()">Comenzar</button>
+        <button id="click-btn" onclick="checkTiming()"  style="display: none;">Clic aquí cuando hayan pasado 5 segundos</button>
+        <p id="result"></p>
+    </div>
+    <script src="JUEGO DE LOS 5 SEGUNDOS JS.js"></script>
+</body>
+</html>
